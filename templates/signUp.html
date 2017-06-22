@@ -3,17 +3,26 @@
 {% block content %}
 
 <h1>Sign Up</h1>
-<form class="/add" method="post">
-   <label>Username:<input class="shiftRigth" type="text" name="" value=""></label>
+<form action="/add" method="post">
+   <label for="newUser">Username:</label>
+   <input type="text" name="newUser">
    <br>
-   <label>Password:<input class="shiftRigth" type="text" name="" value=""></label>
+   <label for="newPass">Password:</label>
+   <input type="password" name="newPass">
    <br>
-   <label>Verify Password:<input class="shiftRigth" type="text" name="" value=""></label>
+   <label for="verifyPass">Verify Password:</label>
+   <input type="password" name="verifyPass">
    <br>
-   <label>Email (optional):<input class="shiftRigth" type="text" name="" value=""></label>
+   <label for="newEmail">Email (optional):</label>
+   <input type="text" name="newEmail">
    <br>
-   <input type="submit" value="Submit">
+   <input type="submit" value="submitUser">
 </form>
 
+
+<p class="error">{{userName_error}}</p>
+<p class="error">{{pword_error}}</p>
+<p class="error">{{vPass_error}}</p>
+<p class="error">{{email_error}}</p>
 
 {% endblock %}
