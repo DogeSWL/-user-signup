@@ -46,7 +46,13 @@ def add_user():
             email_error = "Email not valid"
 
     if (userName_error != '') or (pword_error != '') or (vPass_error != '') or (email_error !=''):
-        return render_template('signUp.html', email_error = email_error, vPass_error = vPass_error, pword_error = pword_error, userName_error = userName_error)
+        return render_template('signUp.html',
+                                email_error = email_error,
+                                vPass_error = vPass_error,
+                                pword_error = pword_error,
+                                userName_error = userName_error,
+                                new_user = new_user,
+                                new_email = new_email)
 
     sentence = "User has been added!"
     content = page_header + "<h1>" + sentence + "</h1>" + page_footer
